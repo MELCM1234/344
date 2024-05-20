@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC y Edad de Mascota</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lugrasimo&family=Noto+Se
+rif:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lugrasimo&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap" rel="stylesheet">
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mi Mascota</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showIMCCalculator()">Calcular IMC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showAgeCalculator()">Calcular Edad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="inicioCalculator()">Iniciar Sesion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="registroCalculator()">Registro de Formulario</a>
+          </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="text-center" id="mascotaInfo">
+      <img src="M.jpg" alt="Mascota" style="max-width: 500px;" class="rounded-circle img-fluid">
+      <h1>PUPPY</h1>
+    </div>
+
+
+    <div id="imcCalculator" style="display:none;">
+      <h3>Calculadora de IMC</h3>
+      <div class="form-group">
+        <label for="altura">Altura (cm):</label>
+        <input type="number" class="form-control" id="altura" placeholder="Ingrese altura en centímetros">
+      </div>
+      <div class="form-group">
+        <label for="peso">Peso (kg):</label>
+        <input type="number" class="form-control" id="peso" placeholder="Ingrese peso en kilogramos">
+      </div>
+      <button class="btn btn-primary" onclick="calcularIMC()">Calcular IMC</button>
+      <button class="btn btn-secondary" onclick="calcularIMC7()">Según 7 años</button>
+      <div id="resultadoIMC"></div>
+    </div>
+
+    <div id="ageCalculator" style="display:none;">
+      <h3>Calculadora de Edad de Mascota</h3>
+      <div class="form-group">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" class="form-control" id="fechaNacimiento">
+      </div>
+      <button class="btn btn-primary" onclick="calcularEdad()">Calcular Edad</button>
+      <div id="resultadoEdad"></div>
+    </div>
+  </div>
+
+
+  <div id="inicioCalculator" style="display:none;">
+    <h3>Iniciar sesión</h3>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button class="btn btn-primary" onclick="inicioCalculator()">Iniciar Sesion</button>
+    </form>
+    <p id="login-message"></p>
+    <div id="resultadoInicio"></div>
+  </div>
+
+
+  <div id="registroCalculator" style="display:none;">
+    <h3>Registro</h3>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="firstname">Nombre:</label>
+        <input type="text" id="firstname" name="firstname" required>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Apellido:</label>
+        <input type="text" id="lastname" name="lastname" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+      <button class="btn btn-primary" onclick="registroCalculator()">Registro</button>
+      
+    </form>
+    <p id="registration-message"></p>
+  </div>
+  <footer>
+    <p>© 2024 Mi Empresa. Todos los derechos reservados.</p>
+</footer>
+ 
+
+
+
+  <script src="JS.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html
+
